@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import AdminComponent from './AdminComponent';
 import MainComponent from './MainComponent';
+import '../../src/App.css';
+
 
 const LoginForm = () => {
   const adminCredentials = {

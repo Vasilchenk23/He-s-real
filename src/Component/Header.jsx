@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../src/App.css';
+
+
 
 const Header = () => {
   return (
@@ -16,17 +19,17 @@ const Header = () => {
               <div className="teen">Дети</div>
           </Link>
         </div>
+        <div className='logoBlock'>
         <Link to="/logo" style={{ textDecoration: 'none' }}>
-            <div className="logo">VAR404</div>
+            <div className="logo" >VAR404</div>
         </Link>
+        </div>
         <div className="setting">
           <Link to="/login" className="userImage">
             <img src="/User.svg" alt="" />
           </Link>
-          <div className="likesImageUser"><img src="/heart.svg" alt="" /></div>
-          <Link to="/basket">
+          <div className="likesImageUser"><img src="/heart.svg" alt="" /></div>     
           <div className="basketImage"><img src="/shoppingBag.svg" alt="" /></div>
-          </Link>
         </div>
       </div>
     </>

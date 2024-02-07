@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import PocketBase from 'pocketbase';
+import '../../src/App.css';
+
+
+
+
 
 const AddProductForm = ({ department }) => {
   const pb = new PocketBase('http://127.0.0.1:8090');
@@ -22,7 +27,7 @@ const AddProductForm = ({ department }) => {
       sizes: Yup.string().required('Обязательное поле'),
       department: Yup.string().required('Обязательное поле'),
     }),
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         const authResult = await pb.admins.authWithPassword('testuser@gmail.com', 'vasmas2325');
         console.log('Authentication successful:', authResult);
@@ -43,6 +48,8 @@ const AddProductForm = ({ department }) => {
             console.log(`Товар успешно добавлен в ${values.department} отдел.`);
           }
         }
+        resetForm();
+        setPreviewImage(null);
       } catch (error) {
         console.error('Произошла ошибка:', error);
       }

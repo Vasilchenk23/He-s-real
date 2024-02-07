@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AddProductForm from "./AddProductForm";
+import '../../src/App.css';
+
 
 
 const AdminComponent = () => {

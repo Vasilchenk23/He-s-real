@@ -30,10 +30,10 @@ const ProductList = ({ department }) => {
     <div className="cards-container">
       {resultData.map((item) => (
         <Link key={item.id} to={`/clothes/${department}/${item.id}`} className="product-card" style={{ textDecoration: 'none', color: 'black' }}>
-          <img src={`http://127.0.0.1:8090/api/files/${item.collectionId}/${item.id}/${item.image[0]}?token=`} alt={item.productName} />
-          <h2 className='nameProduct'>{item.productName}</h2>
-          <p>Размеры: {item.sizes}</p>
-          <p>Цена: ₴{item.price}</p>
+          <img className='imageProductList' src={`http://127.0.0.1:8090/api/files/${item.collectionId}/${item.id}/${item.image[0]}?token=`} alt={item.productName} />
+          <h2 className='nameProductList'>{item.productName}</h2>
+          <p className='sizesProductList'>Размеры: {item.sizes}</p>
+          <p className='priceProductList'>Цена: ₴{item.price}</p>
         </Link>
       ))}
     </div>

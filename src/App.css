@@ -1,5 +1,25 @@
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('src/font/Ubuntu/Ubuntu-Bold.ttf') ; 
+}
+
+@font-face {
+  font-family: 'Ubuntu-BoldItalic';
+  src: url('src/font/Ubuntu/Ubuntu-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url('src/font/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('src/font/Ubuntu/Ubuntu-Medium.ttf');
+}
 body{
   margin: 0;
+  background-color: #bbb9b9;
 }
 
 ::-webkit-scrollbar {
@@ -19,32 +39,35 @@ body{
   background: #555; /* цвет полосы прокрутки при наведении */
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(114, 111, 111);
+.header {
+  display: flex;
+  justify-content: space-between;
 }
+
 
 .members{
     display: flex;
     width: 43.26px;
     height: 23px;
-    margin-top: 5px;
+    margin-top: 49px;
 }
 
 .setting{
     display: flex;
+    margin-top: 30px;
 }
+
+
 
 .women{
     display: flex;
-    width: 37.06px;
+    width: 58px;
     height: 23px;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #585858;
-    font-family: Inter;
+    color: #000000;
+    font-family: Ubuntu-BoldItalic;
     font-size: 30px;
     font-style: normal;
     font-weight: 500;
@@ -55,13 +78,13 @@ body{
 
 .men{
     display: flex;
-    width: 25.83px;
+    width: 50px;
     height: 23px;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #585858;
-    font-family: Inter;
+    color: #000000;
+    font-family: Ubuntu-BoldItalic;
     font-size: 30px;
     font-style: normal;
     font-weight: 500;
@@ -72,13 +95,13 @@ body{
 
 .teen{
     display: flex;
-    width: 43.26px;
+    width: 65px;
     height: 23px;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #585858;
-    font-family: Inter;
+    color: #000000;
+    font-family: Ubuntu-BoldItalic;
     font-size:30px;
     font-style: normal;
     font-weight: 500;
@@ -87,19 +110,22 @@ body{
     margin-left: 50px;
 }
 
+.logoBlock{
+  display: flex;
+  width: 608px;
+  height: 109px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 50px;
+  margin-left: 600px;
+}
+
 .logo{
-    display: flex;
-    width: 158px;
-    height: 109px;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Inter;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
+  color: #000;
+  font-family: Ubuntu-Bold;
 }
 
 .userImage{
@@ -115,11 +141,31 @@ body{
 
 /* Family.jsx style */
 
-.blockFamily{
+/* Family.css */
+.blockFamily {
     display: flex;
-    justify-content: space-between;
-    height: auto;
-    margin-top: 10px;
+    justify-content: space-between; /* Равномерное распределение блоков по горизонтали */
+    align-items: initial; /* Возвращение выравнивания по вертикали в начальное состояние */
+    border-top: 1px solid grey;
+}
+
+.blockCard {
+  width: 100%; /* Карточки занимают всю ширину */
+  margin-top: 10px;
+}
+
+/* Медиа-запрос для изменения стилей на более широких экранах (например, на ноутбуке) */
+@media (max-width: 732px) {
+  .blockFamily {
+  display: flex;
+  flex-direction: column; /* По умолчанию карточки будут столбцом */
+  align-items: center; /* Центрирование по вертикали для мобильных устройств */
+  margin-left: 700px;
+  }
+
+  .blockCard img {
+    margin: 50px;
+  }
 }
 
 
@@ -151,15 +197,48 @@ body{
   }
 
   /* ProductList.css */
-.product-list {
+  .product-list {
     text-align: center;
     margin-top: 20px;
+    margin: 0 auto;
+    font-family: Ubuntu-Regular;
   }
+
+@media (max-width: 767px) {
+  .imageProductList{
+    margin: 50px 0px 0px 500px;
+  }
+  .nameProductList{
+    margin: 0px 0px 0px 430px;
+    width: 500px;
+    font-size: 40px;
+  }
+  .sizesProductList{
+    margin: 0px 0px 0px 430px;
+    width: 500px;
+    font-size: 35px;
+  }
+  .priceProductList{
+    margin: 0px 0px 0px 430px;
+    width: 500px;
+    font-size: 35px;
+  }
+}
   
   .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  @media (max-width: 767px) {
+    .cards-container {
+      margin: 0px 0px 0px 10px;
+    }
+    .product-card {
+    width: 100%;
+    height: 100%;
+    }
   }
   
   .product-card {
@@ -199,7 +278,16 @@ body{
   flex-direction: column;
   max-width: 300px;
   margin: 0 auto;
+  border: none;
+  outline: none;
+  font-family: Ubuntu-Medium;
 }
+
+.login-form input:focus {
+  outline: none;
+  border: none;
+}
+
 
 label {
   margin-bottom: 5px;
@@ -220,6 +308,7 @@ input {
   transition: background-color 0.3s ease;
   width: 200px;
   margin: 0px 0px 0px 60px;
+  font-family: Ubuntu-Medium;
 }
 
 .login-button:hover {
@@ -239,6 +328,7 @@ input {
   display: block;
   margin: 10px auto;
   width: 50%;
+  font-family: Ubuntu-Medium;
 }
 
 .productName {
@@ -339,8 +429,13 @@ input {
   border-radius: 4px;
   cursor: pointer;
   width: 500px;
-  margin: 10px 0px 0px 550px;
+  margin: 10px 0px 0px 480px;
+  font-family: Ubuntu-Medium;
   transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.userData{
+  font-family: Ubuntu-Regular;
 }
 
 .submit-btn:hover {
@@ -351,6 +446,12 @@ input {
  .clothes-details {
   display: flex;
   font-size: 30px;
+  width: 1400px;
+  margin: 0px 0px 0px 20px;
+}
+
+.details{
+  font-family: Ubuntu-Regular;
 }
 
 
@@ -368,15 +469,15 @@ input {
   margin: 5px 0;
 }
 
-.buttons {
+.button {
   display: flex;
   justify-content: space-between;
   width: 800px;
   margin: -600px 0px 0px 600px;
 }
 
-.green-button {
-  background-color: green;
+.grey-button {
+  background-color: rgb(84, 83, 87);
   color: white;
   padding: 10px 20px;
   cursor: pointer;
@@ -385,20 +486,50 @@ input {
   border-radius: 20px;
   margin: 500px 0px 0px 0px;
   border: none;
+  font-family: Ubuntu-Medium;
 }
 
-.gray-button {
-  background-color: gray;
+.black-button {
+  background-color: rgb(0, 0, 0);
   color: white;
-  padding: 10px 20px;
   cursor: pointer;
-  height: 80px;
+  height: 15px;
   width: 300px;
   border-radius: 20px;
   border: none;
-  margin: 500px 0px 0px 0px;
+  margin: 500px 0px 0px 500px;
+  text-align: center;
+  text-decoration: none;
+  padding: 30px 0px;
+  font-family: Ubuntu-Medium;
 }
 
+@media (max-width: 700px) {
+  .black-button{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  height: 30px;
+  width: 700px;
+  border-radius: 20px;
+  font-size: 30px;
+  border: none;
+  margin: 500px 0px 0px 300px;
+  text-align: center;
+  text-decoration: none;
+  padding: 30px 0px;
+  font-family: Ubuntu-Medium;
+  }
+  .nameProductDetails{
+    font-size: 70px;
+  }
+  .priceProductDetails{
+    font-size: 50px;
+  }
+  .sizesProductDetails{
+    font-size: 50px;
+  }
+}
 
 .cartss {
   position: absolute;
@@ -409,6 +540,12 @@ input {
   border-radius: 50%;
   padding: 5px 8px;
   font-size: 12px;
+}
+
+/* MainClothes.jsx */
+
+.imageMainClothes{
+  width: 100%;
 }
 
 /* Shopping.jsx */
@@ -422,6 +559,7 @@ input {
   border-bottom: 1px solid grey;
   margin: 1px auto;
   margin-bottom: 20px;
+  font-family: Ubuntu-Regular;
 }
 
 .priceProduct{
@@ -430,11 +568,12 @@ input {
   align-items: center;
 }
 
-.delete{
+.sizesProduct{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 /* ShoppinBag.jsx */
 
@@ -500,8 +639,22 @@ input {
   justify-content: space-between;
 }
 
+.h2RevieModalContent{
+  font-family: Ubuntu-BoldItalic;
+}
+
+.review-modal{
+  font-family: Ubuntu-Regular;
+}
+
 .nameUserBag{
   width: 400px;
+  border-bottom: 1px solid gray ;
+}
+
+.nameUserOrderProduct{
+  width: 400px;
+  padding: 40px 0px 0px 10px;
   border-bottom: 1px solid gray ;
 }
 
@@ -510,16 +663,40 @@ input {
   border-bottom: 1px solid gray ;
 }
 
+.telephoneProductSizes{
+  width: 400px;
+  padding: 40px 0px 0px 10px;
+  border-bottom: 1px solid gray ;
+}
+
 .inputNameUserBag{
   width: 380px;
   outline: none;
   border: none;
+  background-color: #bbb9b9;
+}
+
+.inputUserOrderProduct{
+  width: 380px;
+  outline: none;
+  border: none;
+  background-color: #bbb9b9;
+  display: none;
 }
 
 .inputTelephoneUserBag{
   width: 380px;
   outline: none;
   border: none;
+  background-color: #bbb9b9;
+}
+
+.inputProductSizes{
+  width: 380px;
+  outline: none;
+  border: none;
+  background-color: #bbb9b9;
+  display: none;
 }
 
 .basketBag{
@@ -527,7 +704,82 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Ubuntu-Medium;
  
+}
+
+@media (max-width: 700px) {
+  .basketBag{
+    margin: 30px 0px 0px 500px;
+    font-size: 60px;
+  }
+  .clearBasketBag{
+    margin: 0px 0px 0px 500px;
+    font-size: 30px;
+  }
+  .imageMainOrder{
+    width: 30%;
+  }
+  .blockBag{
+    display: flex;
+    justify-content: space-between;
+    width: 330%;
+    height: 70%;
+    margin: 10px 0px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin: 1px auto;
+    margin-bottom: 20px;
+    font-family: Ubuntu-Regular;
+  }
+  .productNameBg{
+    font-size: 50px;
+  }
+  .plus{
+    font-size: 80px;
+  }
+  .minus{
+    font-size: 80px;
+  }
+  .number{
+    font-size: 80px;
+  }
+  .priceProduct{
+    font-size: 50px;
+  }
+  .sizesProduct{
+    font-size: 50px;
+  }
+  .add-product-form-container{
+    width: 300%;
+    height: 3000px;
+  }
+  .form-label{
+    font-size: 40px;
+  }
+  .productName{
+    font-size: 40px;
+  }
+  .error-message{
+    font-size: 30px;
+    width: 300px;
+    margin: 0px 0px 0px 550px;
+  }
+  .price{
+    font-size: 40px;
+  }
+  .sizes{
+    font-size: 40px;
+  }
+  .department{
+    font-size: 40px;
+  }
+  .submit-btn{
+    height: 60px;
+    width: 350px;
+    font-size: 30px;
+    margin: 0px 0px 0px 500px;
+  }
 }
 
 .clearBasketBag{
@@ -535,6 +787,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Ubuntu-Regular;
   
 }
 
@@ -552,16 +805,92 @@ input {
 
 .feedbackBag{
   width: 80%;
+  background-color: #bbb9b9;
 }
 
 .orderButtonBag{
   width: 80%;
+  font-family: Ubuntu-Medium;
+  border-radius: 20px;
 }
 
 .mainOrder{
   width: 95%;
   margin: 0 auto;
 }
+
+@media (max-width: 700px) {
+  .mainOrder{
+    width: 330%;
+    margin: 200px 0px 0px 10px;
+  }
+  .ordering{
+    font-size: 40px;
+    width: 500px;
+  }
+  .userData{
+    font-size: 30px;
+  }
+  .delivery{
+    font-size: 30px;
+  }
+  .h2Payment{
+    font-size: 45px;
+  }
+  .feedbackBag{
+    font-size: 30px;
+  }
+  .feedbackBagDiv{
+    width: 800px;
+  }
+  .inputNameUserBag{
+    font-size: 30px;
+  }
+
+  .inputTelephoneUserBag{
+    font-size: 30px;
+  }
+  .deliveryLabel{
+    font-size: 20px;
+  }
+  .orderButtonBag{
+    font-size: 40px;
+  }
+
+  .reviewsDivBag{
+    margin: 0px 500px;
+  }
+
+  .reviewsDivBag button{
+    margin: 170px 0px 0px 0px;
+    height: 70px;
+    font-size: 30px;
+  }
+ .inputTextRevieModalContent{
+  font-size: 30px;
+ }
+ .inputTelRevieModalContent{
+  font-size: 30px;
+ }
+ .downloadImage{
+  font-size: 30px;
+ }
+ .buttonClose{
+  font-size: 34px;
+ }
+ .buttonOpen{
+  font-size: 34px;
+}
+.selectedImage{
+  width: 200px;
+  height: 200px;
+}
+}
+
+.delivery{
+  font-family: Ubuntu-Regular;
+}
+
 
 .deliveryLabel{
  border: 1px solid grey;
@@ -571,6 +900,7 @@ input {
  outline: none;
  width: 250px;
  height: 40px;
+ background-color: #bbb9b9;
 }
 
 .deliveryArea{
@@ -591,6 +921,7 @@ input {
   outline: none;
   width: 250px;
   height: 40px;
+  background-color:  #bbb9b9;;
 }
 
 .deliveryDepart{
@@ -610,15 +941,19 @@ input {
 .inputPay{
   display: flex;
   justify-content: space-between;
+  font-family: Ubuntu-Regular;
+  font-size: 15px;
 }
 
 .inputPayNow{
   display: flex;
   justify-content: space-between;
+  font-family: Ubuntu-Regular;
 }
 
 .labelPay{
   width: 300px;
+  
 }
 
 .labelPayNow{
@@ -658,6 +993,8 @@ input {
   background-color: #000;
   color: white;
   border: none;
+  border-radius: 20px;
+  font-family: Ubuntu-Medium;
 }
 
 .review-modal {
@@ -689,6 +1026,7 @@ input {
   width: 250px;
   background-color: grey;
   border: none;
+  font-family: Ubuntu-Medium;
 }
 
 .buttonOpen{
@@ -697,6 +1035,7 @@ input {
   background-color: black;
   border: none;
   color:  white;
+  font-family: Ubuntu-Medium;
 }
 
 
@@ -718,7 +1057,7 @@ input {
 
 .pRevieModalContent{
   margin: -50px 0px;
-  font-size: 13px;
+  font-size: 20px;
   color: gray;
   padding: 0px 0px 0px 10px;
   margin: 10px 0px;
@@ -730,7 +1069,7 @@ input {
   align-items: center;
   margin: 20px 0px 0px 10px;
   border-bottom: 3px solid rgb(74, 71, 71);
-  width: 50%;
+  width: 50%;  
 }
 
 .downloadImageBlock{
@@ -743,34 +1082,75 @@ input {
 
 
 /* Footer.jsx */
-.footer{
+.footer {
   display: flex;
   justify-content: space-between;
-  margin: 0px 100px;
+  margin: 100px 20px; /* Оставьте отступы по вашему усмотрению */
+}
+
+.box{
+  height: 900px;
 }
 
 
-.footerLine{
-  width: 100px;
-  height: 3px;
-  background-color: black;
-  margin: 0 auto;
+.publicNetworkImg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog,
+.infoBlockFooter,
+.publicNetwork {
+  font-family: Ubuntu-Regular;
   margin-bottom: 20px;
 }
 
-.publicNetworkImg{
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid red;
-}
-
-
-
-.feedbackBlock{
+.feedbackBlock {
   background-color: #000;
   color: white;
 }
 
-.h1FeedbackBlock{
+.h1FeedbackBlock {
   margin: 0;
+}
+
+/* Медиа-запрос для устройств с максимальной шириной 600px */
+@media only screen and (max-width: 1000px) {
+  .footer {
+    justify-content: space-between;
+    margin-left: 120px;
+    width: 1200px;
+    margin-top: 900px; /* Прижимаем футер к низу */
+    font-size: 30px;
+  }
+  
+  .catalog,
+  .infoBlockFooter,
+  .publicNetwork {
+    margin-bottom: 0; /* Убираем отступы между блоками на телефонах */
+  }
+}
+
+
+/* menClothes.jsx */
+
+.menClothes{
+  margin: 50px 0px 0px 93px;
+  font-size: 50px;
+  width: 600px;
+  font-family: Ubuntu-Bold;
+}
+
+.womenClothes{
+  margin: 50px 0px 0px 66px;
+  font-size: 50px;
+  width: 600px;
+  font-family: Ubuntu-Bold;
+}
+
+.kidsClothes{
+  margin: 50px 0px 0px 66px;
+  font-size: 50px;
+  width: 600px;
+  font-family: Ubuntu-Bold;
 }

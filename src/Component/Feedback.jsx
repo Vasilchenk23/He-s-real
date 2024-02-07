@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PocketBase from 'pocketbase';
+import '../../src/App.css';
+
 
 const pb = new PocketBase('http://127.0.0.1:8090');
 
@@ -30,7 +32,7 @@ const Feedback = () => {
     {resultData.map((item) => (
   <div key={item.id} style={{ border: '1px solid #ddd', padding: '20px', margin: '20px 0px 0px 0px', display: 'flex', justifyContent:'space-between', alignItems:'center' }}>
     <h2>{item.userName}</h2>
-    <p>{item.userTelephone}</p>
+    <p>{item.userFeedback}</p>
     {item.selectedImage.length > 0 ? (
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
         {item.selectedImage.map((imageName, index) => {
