@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PocketBase from 'pocketbase';
 import { Link } from 'react-router-dom';
 
-const pb = new PocketBase('http://0.0.0.0:8080');
+const pb = new PocketBase('https://0.0.0.0:8080');
 
 const ProductList = ({ department }) => {
   const [resultData, setResultData] = useState([]);
@@ -30,7 +30,7 @@ const ProductList = ({ department }) => {
     <div className="cards-container">
       {resultData.map((item) => (
         <Link key={item.id} to={`/clothes/${department}/${item.id}`} className="product-card" style={{ textDecoration: 'none', color: 'black' }}>
-          <img className='imageProductList' src={`http://0.0.0.0:8080/api/files/${item.collectionId}/${item.id}/${item.image[0]}?token=`} alt={item.productName} />
+          <img className='imageProductList' src={`https://0.0.0.0:8080/api/files/${item.collectionId}/${item.id}/${item.image[0]}?token=`} alt={item.productName} />
           <h2 className='nameProductList'>{item.productName}</h2>
           <p className='sizesProductList'>Размеры: {item.sizes}</p>
           <p className='priceProductList'>Цена: ₴{item.price}</p>
