@@ -106,7 +106,7 @@ const Order = () => {
         orderComment,
       };
 
-      await fetch('https://shopvar404.vercel.app/submitOrder', {
+      await fetch('https://shopvar404.vercel.app:3001/submitOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
