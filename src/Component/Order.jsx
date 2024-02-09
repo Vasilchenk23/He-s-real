@@ -106,7 +106,7 @@ const Order = () => {
         orderComment,
       };
 
-      await fetch('http://127.0.0.1:3001/submitOrder', {
+      await fetch('http://localhost:3333/submitOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

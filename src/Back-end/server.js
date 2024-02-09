@@ -4,7 +4,6 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-require('dotenv').config();
 
 const app = express();
 const port = 3001;
@@ -15,8 +14,8 @@ app.use(bodyParser.json());
 app.post('/submitOrder', async (req, res) => {
   try {
     const orderData = req.body;
-    const telegramBotToken = process.env.BOT_TOKEN;
-    const chatId = process.env.CHAT_ID;
+    const telegramBotToken = '6769576713:AAFHPH_ObAOeNGC9kvYNWt8mG8-utwPs7KQ';
+    const chatId = '1936815365';
 
     const message = `
       Новый заказ!
