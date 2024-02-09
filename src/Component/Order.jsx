@@ -5,7 +5,7 @@ import axios from 'axios';
 import '../../src/App.css';
 
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase('https://pocketbase-production-1de1.up.railway.app/');
 
 const Order = () => {
   const { id: productId, price, productName, sizes, collectionId, image } = useParams();

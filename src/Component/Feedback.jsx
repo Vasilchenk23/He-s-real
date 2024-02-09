@@ -3,7 +3,7 @@ import PocketBase from 'pocketbase';
 import '../../src/App.css';
 
 
-const pb = new PocketBase('https://0.0.0.0:8080');
+const pb = new PocketBase('https://pocketbase-production-1de1.up.railway.app/');
 
 const Feedback = () => {
     const [resultData, setResultData] = useState([]);
@@ -36,7 +36,7 @@ const Feedback = () => {
     {item.selectedImage.length > 0 ? (
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
         {item.selectedImage.map((imageName, index) => {
-          const imageUrl = `http://127.0.0.1:8090/api/files/${item.collectionId}/${item.id}/${imageName}?token=`;
+          const imageUrl = `https://pocketbase-production-1de1.up.railway.app/api/files/${item.collectionId}/${item.id}/${imageName}?token=`;
           console.log(`URL for ${item.userName}'s image ${index + 1}:`, imageUrl);
           return <img key={index} src={imageUrl} alt={`Image ${index + 1}`} style={{ width: '150px', height: '150px', objectFit: 'cover', marginBottom: '10px' }} />;
         })}

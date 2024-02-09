@@ -51,7 +51,7 @@ const MainClothesOrder = () => {
       <p className='clearBasketBag'>Очистить корзину</p>
       <div className="blockBag">
         <img
-          src={`https://0.0.0.0:8080/api/files/${collectionId}/${productId}/${image}?token=`}
+          src={`https://pocketbase-production-1de1.up.railway.app/api/files/${collectionId}/${productId}/${image}?token=`}
           alt={productName}
           className='imageMainOrder'
           style={{ maxWidth: '20%', padding:'10px'}}

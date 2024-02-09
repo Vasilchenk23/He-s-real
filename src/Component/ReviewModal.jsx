@@ -5,7 +5,7 @@ import '../../src/App.css';
 
 
 
-const pb = new PocketBase('https://0.0.0.0:8080');
+const pb = new PocketBase('https://pocketbase-production-1de1.up.railway.app/');
 
 
 const ReviewModal = ({ onClose }) => {

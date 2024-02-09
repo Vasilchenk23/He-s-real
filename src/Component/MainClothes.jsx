@@ -6,7 +6,7 @@ import Footer from './Footer';
 import '../../src/App.css';
 
 
-const pb = new PocketBase('https://0.0.0.0:8080');
+const pb = new PocketBase('https://pocketbase-production-1de1.up.railway.app/');
 
 const MainClothes = () => {
   const { department, productId } = useParams();
@@ -37,7 +37,7 @@ const MainClothes = () => {
     <>
       <Header />
       <div className="clothes-details">
-        <img className='imageMainClothes' src={`https://0.0.0.0:8080/api/files/${productDetails.collectionId}/${productDetails.id}/${productDetails.image[0]}?token=`} alt={productDetails.productName} />
+        <img className='imageMainClothes' src={`https://pocketbase-production-1de1.up.railway.app/api/files/${productDetails.collectionId}/${productDetails.id}/${productDetails.image[0]}?token=`} alt={productDetails.productName} />
         <div className="details">
           <h2 className='nameProductDetails'>{productDetails.productName}</h2>
           <p className='priceProductDetails'>Цена: ₴{productDetails.price}</p>
