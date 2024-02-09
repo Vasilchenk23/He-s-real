@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 const port = 3002;
@@ -31,7 +32,7 @@ app.post('/getCities', async (req, res) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Api-Key': 'b3439cb932ceb95d04d8470ea45ae4c9',
+          'Api-Key': process.env.API_KEY,
         },
       }
     );
