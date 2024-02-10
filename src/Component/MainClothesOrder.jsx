@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReviewModal from './ReviewModal';
 import Order from './Order';
-import Header from './Header';
-import Footer from './Footer';
 import '../../src/App.css';
 
 
@@ -46,7 +44,6 @@ const MainClothesOrder = () => {
 
   return (
     <>
-    <Header/>
       <h1 className='basketBag'>Корзина</h1>
       <p className='clearBasketBag'>Очистить корзину</p>
       <div className="blockBag">
@@ -72,7 +69,6 @@ const MainClothesOrder = () => {
   </button>
 </div>
 {isReviewModalOpen && <ReviewModal onClose={closeReviewModal} />}
-<Footer/>
     </>
   );
 };

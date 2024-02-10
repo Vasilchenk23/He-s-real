@@ -106,7 +106,7 @@ const Order = () => {
         orderComment,
       };
 
-      await fetch('http://localhost:3333/submitOrder', {
+      await fetch('https://expressjs-production-2512.up.railway.app/hello', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

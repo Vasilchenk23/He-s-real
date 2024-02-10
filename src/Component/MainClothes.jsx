@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PocketBase from 'pocketbase';
-import Header from './Header';
-import Footer from './Footer';
 import '../../src/App.css';
 
 
@@ -35,7 +33,6 @@ const MainClothes = () => {
 
   return (
     <>
-      <Header />
       <div className="clothes-details">
         <img className='imageMainClothes' src={`https://pocketbase-production-1de1.up.railway.app/api/files/${productDetails.collectionId}/${productDetails.id}/${productDetails.image[0]}?token=`} alt={productDetails.productName} />
         <div className="details">
@@ -52,7 +49,6 @@ const MainClothes = () => {
         </Link>
       </div>
       <div className="box"></div>
-      <Footer/>
     </>
   );
 };

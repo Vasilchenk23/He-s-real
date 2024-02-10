@@ -1,22 +1,23 @@
 @font-face {
   font-family: 'Ubuntu-Bold';
-  src: url('src/font/Ubuntu/Ubuntu-Bold.ttf') ; 
+  src: url('/src/font/Ubuntu/Ubuntu-Bold.ttf');
 }
 
 @font-face {
   font-family: 'Ubuntu-BoldItalic';
-  src: url('src/font/Ubuntu/Ubuntu-BoldItalic.ttf');
+  src: url('/src/font/Ubuntu/Ubuntu-BoldItalic.ttf');
 }
 
 @font-face {
   font-family: 'Ubuntu-Regular';
-  src: url('src/font/Ubuntu/Ubuntu-Regular.ttf');
+  src: url('/src/font/Ubuntu/Ubuntu-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Ubuntu-Medium';
-  src: url('src/font/Ubuntu/Ubuntu-Medium.ttf');
+  src: url('/src/font/Ubuntu/Ubuntu-Medium.ttf');
 }
+
 body{
   margin: 0;
   background-color: #bbb9b9;

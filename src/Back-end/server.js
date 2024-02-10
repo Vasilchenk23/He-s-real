@@ -11,7 +11,7 @@ const port = 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/submitOrder', async (req, res) => {
+app.post('/hello', async (req, res) => {
   try {
     const orderData = req.body;
     const telegramBotToken = '6769576713:AAFHPH_ObAOeNGC9kvYNWt8mG8-utwPs7KQ';
