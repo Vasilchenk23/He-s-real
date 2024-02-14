@@ -106,7 +106,7 @@ const Order = () => {
         orderComment,
       };
 
-      await fetch('https://successful-notebook-production.up.railway.app/hello', {
+      await fetch('https://express-js-production.up.railway.app/hello', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
