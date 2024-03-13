@@ -10,18 +10,18 @@ const Header = () => {
       <div className="header">
         <div className="members">
          <Link to="/women" style={{ textDecoration: 'none' }}>
-              <div className="women">Она</div>
+              <div className="women">Корм</div>
          </Link> 
           <Link to="/men" style={{ textDecoration: 'none' }}>
-              <div className="men">Он</div>
+              <div className="men">Іграшки</div>
           </Link>
           <Link to="/kids" style={{ textDecoration: 'none' }}>
-              <div className="teen">Дети</div>
+              <div className="teen">Догляд</div>
           </Link>
         </div>
         <div className='logoBlock'>
         <Link to="/logo" style={{ textDecoration: 'none' }}>
-            <div className="logo" >VAR404</div>
+            <div className="logo" >He's real!</div>
         </Link>
         </div>
         <div className="setting">

@@ -6,7 +6,7 @@ import '../../src/App.css';
 const KidsClothes = () => {
     return(
         <>
-        <h2 className="kidsClothes">Детская одежда</h2>
+        <h2 className="kidsClothes">Догляд</h2>
         <ProductList department="kids" />
         </>
     );

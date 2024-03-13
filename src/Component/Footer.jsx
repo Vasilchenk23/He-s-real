@@ -9,9 +9,9 @@ const Footer = () => {
             <div className="footer">
                 <div className="catalog">
                     <h1>Каталог</h1>
-                  <Link to="/men"style={{ textDecoration: 'none', color: 'black' }}> <p>Одежда Мужская</p></Link> 
-                  <Link to="/women"style={{ textDecoration: 'none', color: 'black' }}> <p>Одежда Женская</p></Link>
-                  <Link to="/kids"style={{ textDecoration: 'none', color: 'black' }}> <p>Одежда Детская</p></Link>
+                  <Link to="/men"style={{ textDecoration: 'none', color: 'black' }}> <p>Корм</p></Link> 
+                  <Link to="/women"style={{ textDecoration: 'none', color: 'black' }}> <p>Іграшки</p></Link>
+                  <Link to="/kids"style={{ textDecoration: 'none', color: 'black' }}> <p>Догляд</p></Link>
                 </div>
                 <div className="infoBlockFooter">
                     <h1>Информация</h1>

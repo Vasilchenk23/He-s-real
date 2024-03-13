@@ -28,7 +28,7 @@ const Feedback = () => {
     return(
         <>
         <div className='feedbackBlock'>
-        <h1 className='h1FeedbackBlock'>Отзывы клиентов интернет магазина VAR404</h1>
+        <h1>Відгуки</h1>
     {resultData.map((item) => (
   <div key={item.id} style={{ border: '1px solid #ddd', padding: '20px', margin: '20px 0px 0px 0px', display: 'flex', justifyContent:'space-between', alignItems:'center' }}>
     <h2>{item.userName}</h2>

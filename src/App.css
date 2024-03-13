@@ -20,29 +20,31 @@
 
 body{
   margin: 0;
-  background-color: #bbb9b9;
+  background-color: #f3de73;
+  color: #b94040;
 }
 
 ::-webkit-scrollbar {
-  width: 5px; /* ширина вертикальной полосы прокрутки */
+  width: 5px; 
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* цвет фона трека */
+  background: #f7af21; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; /* цвет полосы прокрутки */
-  border-radius: 5px; /* скругление углов полосы прокрутки */
+  background: #000000; 
+  border-radius: 5px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* цвет полосы прокрутки при наведении */
+  background: #555; 
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  color: #b94040;
 }
 
 
@@ -51,6 +53,7 @@ body{
     width: 43.26px;
     height: 23px;
     margin-top: 49px;
+    color: #b94040;
 }
 
 .setting{
@@ -75,6 +78,7 @@ body{
     line-height: 20.7px; 
     text-transform: capitalize;
     margin-left: 50px;
+    color: #b94040;
 }
 
 .men{
@@ -92,6 +96,7 @@ body{
     line-height: 20.7px;
     text-transform: capitalize;
     margin-left: 50px;
+    color: #b94040;
 }
 
 .teen{
@@ -108,7 +113,8 @@ body{
     font-weight: 500;
     line-height: 20.7px; 
     text-transform: capitalize;
-    margin-left: 50px;
+    margin-left: 100px;
+    color: #b94040;
 }
 
 .logoBlock{
@@ -118,14 +124,14 @@ body{
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  color: #000;
+  color: #e07014;
   font-family: Inter;
   font-size: 50px;
   margin-left: 600px;
 }
 
 .logo{
-  color: #000;
+  color: #b94040;
   font-family: Ubuntu-Bold;
 }
 
@@ -147,7 +153,8 @@ body{
     display: flex;
     justify-content: space-between; /* Равномерное распределение блоков по горизонтали */
     align-items: initial; /* Возвращение выравнивания по вертикали в начальное состояние */
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(250, 163, 1);
+    margin: 0px 20px;
 }
 
 .blockCard {
@@ -674,14 +681,14 @@ input {
   width: 380px;
   outline: none;
   border: none;
-  background-color: #bbb9b9;
+  background-color: #f3de73;
 }
 
 .inputUserOrderProduct{
   width: 380px;
   outline: none;
   border: none;
-  background-color: #bbb9b9;
+  background-color: #f3de73;
   display: none;
 }
 
@@ -689,14 +696,14 @@ input {
   width: 380px;
   outline: none;
   border: none;
-  background-color: #bbb9b9;
+  background-color: #f3de73;
 }
 
 .inputProductSizes{
   width: 380px;
   outline: none;
   border: none;
-  background-color: #bbb9b9;
+  background-color: #f3de73;
   display: none;
 }
 
@@ -806,7 +813,7 @@ input {
 
 .feedbackBag{
   width: 80%;
-  background-color: #bbb9b9;
+  background-color: #f3de73;
 }
 
 .orderButtonBag{
@@ -901,7 +908,7 @@ input {
  outline: none;
  width: 250px;
  height: 40px;
- background-color: #bbb9b9;
+ background-color: #f3de73;
 }
 
 .deliveryArea{
@@ -922,7 +929,7 @@ input {
   outline: none;
   width: 250px;
   height: 40px;
-  background-color:  #bbb9b9;;
+  background-color: #f3de73;
 }
 
 .deliveryDepart{
@@ -1107,8 +1114,7 @@ input {
 }
 
 .feedbackBlock {
-  background-color: #000;
-  color: white;
+ color: #b94040;
 }
 
 .h1FeedbackBlock {

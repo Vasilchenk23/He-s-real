@@ -8,19 +8,19 @@ const Family = () => {
             <div className="blockFamily">
                 <Link to="/women">
                     <div className="blockCard">
-                        <img src="/Women.png" alt="" />
+                        <img src="/Women.jpg" alt="" />
                     </div>
                 </Link>
 
                 <Link to="/men">
                     <div className="blockCard">
-                        <img src="/Men.png" alt="" />
+                        <img src="/Men.jpg" alt="" />
                     </div>
                 </Link>
 
                 <Link to="/kids">
                     <div className="blockCard">
-                        <img src="/Teen.png" alt="" />
+                        <img src="/Teen.jpg" alt="" />
                     </div>
                 </Link>
             </div>
