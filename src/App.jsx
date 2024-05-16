@@ -13,7 +13,7 @@ import MainClothesOrder from './Component/MainClothesOrder';
 function App() {
   return (
     <Router>
-      <Layout> {/* Оберните ваши маршруты в компонент Layout */}
+      <Layout> 
         <Routes>
           <Route path="/login" element={<LoginForm />} />
           <Route path="/women" element={<WomenClothes />} />
